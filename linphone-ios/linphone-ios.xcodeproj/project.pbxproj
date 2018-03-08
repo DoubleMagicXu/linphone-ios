@@ -13,7 +13,6 @@
 		46287AB42050C540005871D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46287AB32050C540005871D0 /* Assets.xcassets */; };
 		46287AB72050C540005871D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46287AB52050C540005871D0 /* LaunchScreen.storyboard */; };
 		46287ABA2050C540005871D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46287AB92050C540005871D0 /* main.m */; };
-		465626EE2050C7AD00A977AC /* Frameworks in Frameworks */ = {isa = PBXBuildFile; fileRef = 465626ED2050C7AD00A977AC /* Frameworks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		46287AB62050C540005871D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46287AB82050C540005871D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46287AB92050C540005871D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		465626ED2050C7AD00A977AC /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = "../../liblinphone-sdk 2 16-35-51-758/apple-darwin/Frameworks"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465626EE2050C7AD00A977AC /* Frameworks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +75,6 @@
 		465626EC2050C7AC00A977AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				465626ED2050C7AD00A977AC /* Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

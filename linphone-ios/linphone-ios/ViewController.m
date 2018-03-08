@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+
 //委托协议
 @interface ViewController ()<UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *account;
