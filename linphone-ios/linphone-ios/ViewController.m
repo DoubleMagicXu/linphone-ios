@@ -29,32 +29,33 @@
 //委托协议方法
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
-    NSLog(@"点击return按键,返回");
+    NSLog(@"return,返回");
     return YES;
 }
 
-//-(void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    //注册键盘出现通知
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:)name:UIKeyboardDidShowNotification object:nil];
-//    //注册键盘隐藏通知
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidHide:)name: UIKeyboardDidHideNotification object:nil];
-//}
-//-(void) viewWillDisappear:(BOOL)animated{
-//    [super viewWillDisappear:animated];
-//    //注销键盘出现通知
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name: UIKeyboardDidShowNotification object:nil];
-//    //注销键盘隐藏通知
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name: UIKeyboardDidHideNotification object:nil];
-//}
-//-(void) keyboardDidShoe:(NSNotification *)notification{
-//    NSLog(@"键盘已打开");
-//}
-//-(void) keyboardDidHide:(NSNotification *)notification{
-//    NSLog(@"键盘已关闭");
-//}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //注册键盘出现通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:)name:UIKeyboardDidShowNotification object:nil];
+    //注册键盘隐藏通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:)name: UIKeyboardDidHideNotification object:nil];
+}
+-(void) viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //注销键盘出现通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name: UIKeyboardDidShowNotification object:nil];
+    //注销键盘隐藏通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name: UIKeyboardDidHideNotification object:nil];
+}
+-(void) keyboardDidShow:(NSNotification *)notification{
+    NSLog(@"键盘已打开");
+}
+-(void) keyboardDidHide:(NSNotification *)notification{
+    NSLog(@"键盘已关闭");
+}
 - (IBAction)registration:(id)sender {
     
 }
+
 
 @end
