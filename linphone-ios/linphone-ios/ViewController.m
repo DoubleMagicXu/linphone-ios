@@ -142,6 +142,9 @@ static void registration_state_changed(struct _LinphoneCore *lc, LinphoneProxyCo
     const char* server_addr;
     identity=self.account.text.UTF8String;
     password=self.password.text.UTF8String;
+//#ifdef DEBUG
+//    linphone_core_enable_logs(NULL); /*enable liblinphone logs.*/
+//#endif
     signal(SIGINT,stop);
     vtable.registration_state_changed=registration_state_changed;
     lc=linphone_core_new(&vtable,NULL,NULL,NULL);
@@ -168,7 +171,10 @@ static void registration_state_changed(struct _LinphoneCore *lc, LinphoneProxyCo
     /* main loop for receiving notifications and doing background linphonecore work: */
     while(running){
         linphone_core_iterate(lc); /* first iterate initiates registration */
-        ms_usleep(5000);
+        ms_usleep(500000);
+        NSLog(@"我在first running");
+        //running=false;
+        //break;
     }
     proxy_cfg = linphone_core_get_default_proxy_config(lc); /* get default proxy config*/
     linphone_proxy_config_edit(proxy_cfg); /*start editing proxy configuration*/
@@ -176,7 +182,8 @@ static void registration_state_changed(struct _LinphoneCore *lc, LinphoneProxyCo
     linphone_proxy_config_done(proxy_cfg); /*initiate REGISTER with expire = 0*/
     while(linphone_proxy_config_get_state(proxy_cfg) !=  LinphoneRegistrationCleared){
         linphone_core_iterate(lc); /*to make sure we receive call backs before shutting down*/
-        ms_usleep(5000);
+        ms_usleep(50000);
+        NSLog(@"我在secound running");
     }
 end:
      printf("Shutting down...\n");
