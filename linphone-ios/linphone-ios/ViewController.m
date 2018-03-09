@@ -165,8 +165,23 @@ static void registration_state_changed(struct _LinphoneCore *lc, LinphoneProxyCo
     linphone_core_add_proxy_config(lc,proxy_cfg); /*add proxy config to linphone core*/
     linphone_core_set_default_proxy(lc,proxy_cfg); /*set to default proxy*/
 
+    /* main loop for receiving notifications and doing background linphonecore work: */
+    while(running){
+        linphone_core_iterate(lc); /* first iterate initiates registration */
+        ms_usleep(5000);
+    }
+    proxy_cfg = linphone_core_get_default_proxy_config(lc); /* get default proxy config*/
+    linphone_proxy_config_edit(proxy_cfg); /*start editing proxy configuration*/
+    linphone_proxy_config_enable_register(proxy_cfg,FALSE); /*de-activate registration for this proxy config*/
+    linphone_proxy_config_done(proxy_cfg); /*initiate REGISTER with expire = 0*/
+    while(linphone_proxy_config_get_state(proxy_cfg) !=  LinphoneRegistrationCleared){
+        linphone_core_iterate(lc); /*to make sure we receive call backs before shutting down*/
+        ms_usleep(5000);
+    }
 end:
      printf("Shutting down...\n");
+    linphone_core_destroy(lc);
+    printf("Exited\n");
     
 }
 
