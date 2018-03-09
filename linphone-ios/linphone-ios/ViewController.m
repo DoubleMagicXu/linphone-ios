@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import  <linphone/core.h>
 //委托协议
 @interface ViewController ()<UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *account;
