@@ -33,6 +33,7 @@
 		460B03C220522324008BF459 /* mswebrtc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A620522306008BF459 /* mswebrtc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		460B03C320522324008BF459 /* msx264.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03AA20522308008BF459 /* msx264.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		460B03C420522324008BF459 /* ortp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A320522306008BF459 /* ortp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03C6205224C1008BF459 /* include in Resources */ = {isa = PBXBuildFile; fileRef = 460B03C5205224C1008BF459 /* include */; };
 		46287AAC2050C540005871D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46287AAB2050C540005871D0 /* AppDelegate.m */; };
 		46287AAF2050C540005871D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46287AAE2050C540005871D0 /* ViewController.m */; };
 		46287AB22050C540005871D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46287AB02050C540005871D0 /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		460B03A820522307008BF459 /* bctoolbox-tester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "bctoolbox-tester.framework"; sourceTree = "<group>"; };
 		460B03A920522308008BF459 /* mediastreamer_base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mediastreamer_base.framework; sourceTree = "<group>"; };
 		460B03AA20522308008BF459 /* msx264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = msx264.framework; sourceTree = "<group>"; };
+		460B03C5205224C1008BF459 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		46287AA72050C540005871D0 /* linphone-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "linphone-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46287AAA2050C540005871D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46287AAB2050C540005871D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		46287A9E2050C540005871D0 = {
 			isa = PBXGroup;
 			children = (
+				460B03C5205224C1008BF459 /* include */,
 				46287AA92050C540005871D0 /* linphone-ios */,
 				46287AA82050C540005871D0 /* Products */,
 				465626EC2050C7AC00A977AC /* Frameworks */,
@@ -232,6 +235,7 @@
 				46287AB72050C540005871D0 /* LaunchScreen.storyboard in Resources */,
 				46287AB42050C540005871D0 /* Assets.xcassets in Resources */,
 				46287AB22050C540005871D0 /* Main.storyboard in Resources */,
+				460B03C6205224C1008BF459 /* include in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,15 +381,12 @@
 		46287ABE2050C540005871D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36HA57XXF2;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				HEADER_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INFOPLIST_FILE = "linphone-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "DoubleMagicXu.linphone-ios";
@@ -398,15 +399,12 @@
 		46287ABF2050C540005871D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 36HA57XXF2;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				HEADER_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INFOPLIST_FILE = "linphone-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "DoubleMagicXu.linphone-ios";
