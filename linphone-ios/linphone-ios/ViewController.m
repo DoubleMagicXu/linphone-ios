@@ -14,30 +14,40 @@ static bool_t running=TRUE;
 static void stop(int signum){
     running=FALSE;
 }
-static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCallState cstate, const char *msg){
-    switch(cstate){
-        case LinphoneCallOutgoingRinging:
-            printf("It is now ringing remotely !\n");
-            break;
-        case LinphoneCallOutgoingEarlyMedia:
-            printf("Receiving some early media\n");
-            break;
-        case LinphoneCallConnected:
-            printf("We are connected !\n");
-            break;
-        case LinphoneCallStreamsRunning:
-            printf("Media streams established !\n");
-            break;
-        case LinphoneCallEnd:
-            printf("Call is terminated.\n");
-            break;
-        case LinphoneCallError:
-            printf("Call failure !");
-            break;
-        default:
-            printf("Unhandled notification %i\n",cstate);
-    }
+//call
+//static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCallState cstate, const char *msg){
+//    switch(cstate){
+//        case LinphoneCallOutgoingRinging:
+//            printf("It is now ringing remotely !\n");
+//            break;
+//        case LinphoneCallOutgoingEarlyMedia:
+//            printf("Receiving some early media\n");
+//            break;
+//        case LinphoneCallConnected:
+//            printf("We are connected !\n");
+//            break;
+//        case LinphoneCallStreamsRunning:
+//            printf("Media streams established !\n");
+//            break;
+//        case LinphoneCallEnd:
+//            printf("Call is terminated.\n");
+//            break;
+//        case LinphoneCallError:
+//            printf("Call failure !");
+//            break;
+//        default:
+//            printf("Unhandled notification %i\n",cstate);
+//    }
+//}
+
+//registration
+static void registration_state_changed(struct _LinphoneCore *lc, LinphoneProxyConfig *cfg, LinphoneRegistrationState cstate, const char *message){
+    printf("New registration state %s for user id [%s] at proxy [%s]\n"
+           ,linphone_registration_state_to_string(cstate)
+           ,linphone_proxy_config_get_identity(cfg)
+           ,linphone_proxy_config_get_addr(cfg));
 }
+
 @interface ViewController ()<UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *account;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -84,41 +94,79 @@ static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCal
     NSLog(@"键盘已关闭");
 }
 - (IBAction)registration:(id)sender {
-    LinphoneCoreVTable vtable={0};
-    LinphoneCore *lc;
-    LinphoneCall *call=NULL;
-    const char *dest=NULL;
-    dest=self.account.text.UTF8String;//destination
-    //signal(SIGINT,stop);
-    vtable.call_state_changed=call_state_changed;
-    lc=linphone_core_new(&vtable,NULL,NULL,NULL);
-    if (dest){
-        /*
-         Place an outgoing call
-         */
-        call=linphone_core_invite(lc,dest);
-        if (call==NULL){
-            printf("Could not place call to %s\n",dest);
-            goto end;
-        }else printf("Call to %s is in progress...",dest);
-        linphone_call_ref(call);
-    }
-    while(running){
-        linphone_core_iterate(lc);
-        ms_usleep(50000);
-    }
-    if (call && linphone_call_get_state(call)!=LinphoneCallEnd){
-        /* terminate the call */
-        printf("Terminating the call...\n");
-        linphone_core_terminate_call(lc,call);
-        /*at this stage we don't need the call object */
-        linphone_call_unref(call);
-    }
-end:
-    printf("Shutting down...\n");
-    linphone_core_destroy(lc);
-    printf("Exited\n");
+//    LinphoneCoreVTable vtable={0};
+//    LinphoneCore *lc;
+//    LinphoneCall *call=NULL;
+//    const char *dest=NULL;
+//    dest=self.account.text.UTF8String;//destination
+//    //signal(SIGINT,stop);
+//    vtable.call_state_changed=call_state_changed;
+//    lc=linphone_core_new(&vtable,NULL,NULL,NULL);
+//    if (dest){
+//        /*
+//         Place an outgoing call
+//         */
+//        call=linphone_core_invite(lc,dest);
+//        if (call==NULL){
+//            printf("Could not place call to %s\n",dest);
+//            goto end;
+//        }else printf("Call to %s is in progress...",dest);
+//        linphone_call_ref(call);
+//    }
+//    while(running){
+//        linphone_core_iterate(lc);
+//        ms_usleep(50000);
+//    }
+//    if (call && linphone_call_get_state(call)!=LinphoneCallEnd){
+//        /* terminate the call */
+//        printf("Terminating the call...\n");
+//        linphone_core_terminate_call(lc,call);
+//        /*at this stage we don't need the call object */
+//        linphone_call_unref(call);
+//    }
+//end:
+//    printf("Shutting down...\n");
+//    linphone_core_destroy(lc);
+//    printf("Exited\n");
 
+    
+    
+//registration
+    LinphoneCore *lc;
+    LinphoneCoreVTable vtable={0};
+    LinphoneProxyConfig* proxy_cfg;
+    LinphoneAddress *from;
+    LinphoneAuthInfo *info;
+    char* identity=NULL;
+    char* password=NULL;
+    const char* server_addr;
+    identity=self.account.text.UTF8String;
+    password=self.password.text.UTF8String;
+    signal(SIGINT,stop);
+    vtable.registration_state_changed=registration_state_changed;
+    lc=linphone_core_new(&vtable,NULL,NULL,NULL);
+    proxy_cfg = linphone_proxy_config_new();
+    /*parse identity*/
+    from = linphone_address_new(identity);
+    if (from==NULL){
+        printf("%s not a valid sip uri, must be like sip:toto@sip.linphone.org \n",identity);
+        goto end;
+    }
+    if (password!=NULL){
+        info=linphone_auth_info_new(linphone_address_get_username(from),NULL,password,NULL,NULL,NULL); /*create authentication structure from identity*/
+        linphone_core_add_auth_info(lc,info); /*add authentication info to LinphoneCore*/
+    }
+    // configure proxy entries
+    linphone_proxy_config_set_identity(proxy_cfg,identity); /*set identity with user name and domain*/
+    server_addr = linphone_address_get_domain(from); /*extract domain address from identity*/
+    linphone_proxy_config_set_server_addr(proxy_cfg,server_addr); /* we assume domain = proxy server address*/
+    linphone_proxy_config_enable_register(proxy_cfg,TRUE); /*activate registration for this proxy config*/
+    linphone_address_unref(from); /*release resource*/
+    linphone_core_add_proxy_config(lc,proxy_cfg); /*add proxy config to linphone core*/
+    linphone_core_set_default_proxy(lc,proxy_cfg); /*set to default proxy*/
+
+end:
+     printf("Shutting down...\n");
     
 }
 
