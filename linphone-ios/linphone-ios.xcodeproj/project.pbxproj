@@ -7,51 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460B03AB20522308008BF459 /* msamr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B039E20522300008BF459 /* msamr.framework */; };
+		460B03AC20522308008BF459 /* bctoolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B039F20522300008BF459 /* bctoolbox.framework */; };
+		460B03AD20522308008BF459 /* linphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A020522304008BF459 /* linphone.framework */; };
+		460B03AE20522308008BF459 /* mediastreamer_voip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A120522305008BF459 /* mediastreamer_voip.framework */; };
+		460B03AF20522308008BF459 /* msopenh264.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A220522305008BF459 /* msopenh264.framework */; };
+		460B03B020522308008BF459 /* ortp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A320522306008BF459 /* ortp.framework */; };
+		460B03B120522308008BF459 /* mssilk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A420522306008BF459 /* mssilk.framework */; };
+		460B03B220522308008BF459 /* linphonetester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A520522306008BF459 /* linphonetester.framework */; };
+		460B03B320522308008BF459 /* mswebrtc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A620522306008BF459 /* mswebrtc.framework */; };
+		460B03B420522308008BF459 /* mscodec2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A720522307008BF459 /* mscodec2.framework */; };
+		460B03B520522308008BF459 /* bctoolbox-tester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A820522307008BF459 /* bctoolbox-tester.framework */; };
+		460B03B620522308008BF459 /* mediastreamer_base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A920522308008BF459 /* mediastreamer_base.framework */; };
+		460B03B720522308008BF459 /* msx264.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03AA20522308008BF459 /* msx264.framework */; };
+		460B03B820522324008BF459 /* bctoolbox-tester.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A820522307008BF459 /* bctoolbox-tester.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03B920522324008BF459 /* bctoolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B039F20522300008BF459 /* bctoolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03BA20522324008BF459 /* linphone.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A020522304008BF459 /* linphone.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03BB20522324008BF459 /* linphonetester.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A520522306008BF459 /* linphonetester.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03BC20522324008BF459 /* mediastreamer_base.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A920522308008BF459 /* mediastreamer_base.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03BD20522324008BF459 /* mediastreamer_voip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A120522305008BF459 /* mediastreamer_voip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03BE20522324008BF459 /* msamr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B039E20522300008BF459 /* msamr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03BF20522324008BF459 /* mscodec2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A720522307008BF459 /* mscodec2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03C020522324008BF459 /* msopenh264.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A220522305008BF459 /* msopenh264.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03C120522324008BF459 /* mssilk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A420522306008BF459 /* mssilk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03C220522324008BF459 /* mswebrtc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A620522306008BF459 /* mswebrtc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03C320522324008BF459 /* msx264.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03AA20522308008BF459 /* msx264.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		460B03C420522324008BF459 /* ortp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 460B03A320522306008BF459 /* ortp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		46287AAC2050C540005871D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46287AAB2050C540005871D0 /* AppDelegate.m */; };
 		46287AAF2050C540005871D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46287AAE2050C540005871D0 /* ViewController.m */; };
 		46287AB22050C540005871D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46287AB02050C540005871D0 /* Main.storyboard */; };
 		46287AB42050C540005871D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46287AB32050C540005871D0 /* Assets.xcassets */; };
 		46287AB72050C540005871D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46287AB52050C540005871D0 /* LaunchScreen.storyboard */; };
 		46287ABA2050C540005871D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46287AB92050C540005871D0 /* main.m */; };
-		46798E0B2051234E00BFF940 /* mswebrtc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798DFE2051234400BFF940 /* mswebrtc.framework */; };
-		46798E0C2051234E00BFF940 /* ortp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798DFF2051234400BFF940 /* ortp.framework */; };
-		46798E0D2051234E00BFF940 /* mediastreamer_base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E002051234600BFF940 /* mediastreamer_base.framework */; };
-		46798E0E2051234E00BFF940 /* linphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E012051234900BFF940 /* linphone.framework */; };
-		46798E0F2051234E00BFF940 /* msamr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E022051234A00BFF940 /* msamr.framework */; };
-		46798E102051234E00BFF940 /* bctoolbox-tester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E032051234A00BFF940 /* bctoolbox-tester.framework */; };
-		46798E112051234E00BFF940 /* mscodec2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E042051234A00BFF940 /* mscodec2.framework */; };
-		46798E122051234E00BFF940 /* mediastreamer_voip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E052051234C00BFF940 /* mediastreamer_voip.framework */; };
-		46798E132051234E00BFF940 /* linphonetester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E062051234D00BFF940 /* linphonetester.framework */; };
-		46798E142051234E00BFF940 /* bctoolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E072051234E00BFF940 /* bctoolbox.framework */; };
-		46798E152051234E00BFF940 /* msopenh264.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E082051234E00BFF940 /* msopenh264.framework */; };
-		46798E162051234E00BFF940 /* mssilk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E092051234E00BFF940 /* mssilk.framework */; };
-		46798E172051234E00BFF940 /* msx264.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E0A2051234E00BFF940 /* msx264.framework */; };
-		46798E182051277500BFF940 /* bctoolbox-tester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E032051234A00BFF940 /* bctoolbox-tester.framework */; };
-		46798E1A2051277500BFF940 /* bctoolbox-tester.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E032051234A00BFF940 /* bctoolbox-tester.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E1B2051277500BFF940 /* bctoolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E072051234E00BFF940 /* bctoolbox.framework */; };
-		46798E1C2051277500BFF940 /* bctoolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E072051234E00BFF940 /* bctoolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E1D2051277500BFF940 /* linphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E012051234900BFF940 /* linphone.framework */; };
-		46798E1E2051277500BFF940 /* linphone.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E012051234900BFF940 /* linphone.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E1F2051277500BFF940 /* linphonetester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E062051234D00BFF940 /* linphonetester.framework */; };
-		46798E202051277500BFF940 /* linphonetester.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E062051234D00BFF940 /* linphonetester.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E212051277500BFF940 /* mediastreamer_base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E002051234600BFF940 /* mediastreamer_base.framework */; };
-		46798E222051277500BFF940 /* mediastreamer_base.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E002051234600BFF940 /* mediastreamer_base.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E232051277500BFF940 /* mediastreamer_voip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E052051234C00BFF940 /* mediastreamer_voip.framework */; };
-		46798E242051277500BFF940 /* mediastreamer_voip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E052051234C00BFF940 /* mediastreamer_voip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E252051277500BFF940 /* msamr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E022051234A00BFF940 /* msamr.framework */; };
-		46798E262051277500BFF940 /* msamr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E022051234A00BFF940 /* msamr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E272051277500BFF940 /* mscodec2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E042051234A00BFF940 /* mscodec2.framework */; };
-		46798E282051277500BFF940 /* mscodec2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E042051234A00BFF940 /* mscodec2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E292051277500BFF940 /* msopenh264.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E082051234E00BFF940 /* msopenh264.framework */; };
-		46798E2A2051277500BFF940 /* msopenh264.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E082051234E00BFF940 /* msopenh264.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E2B2051277500BFF940 /* mssilk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E092051234E00BFF940 /* mssilk.framework */; };
-		46798E2C2051277500BFF940 /* mssilk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E092051234E00BFF940 /* mssilk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E2D2051277500BFF940 /* mswebrtc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798DFE2051234400BFF940 /* mswebrtc.framework */; };
-		46798E2E2051277500BFF940 /* mswebrtc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798DFE2051234400BFF940 /* mswebrtc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E2F2051277500BFF940 /* msx264.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E0A2051234E00BFF940 /* msx264.framework */; };
-		46798E302051277500BFF940 /* msx264.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798E0A2051234E00BFF940 /* msx264.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46798E312051277500BFF940 /* ortp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46798DFF2051234400BFF940 /* ortp.framework */; };
-		46798E322051277500BFF940 /* ortp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46798DFF2051234400BFF940 /* ortp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,19 +48,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				46798E242051277500BFF940 /* mediastreamer_voip.framework in Embed Frameworks */,
-				46798E2C2051277500BFF940 /* mssilk.framework in Embed Frameworks */,
-				46798E202051277500BFF940 /* linphonetester.framework in Embed Frameworks */,
-				46798E222051277500BFF940 /* mediastreamer_base.framework in Embed Frameworks */,
-				46798E302051277500BFF940 /* msx264.framework in Embed Frameworks */,
-				46798E1E2051277500BFF940 /* linphone.framework in Embed Frameworks */,
-				46798E1A2051277500BFF940 /* bctoolbox-tester.framework in Embed Frameworks */,
-				46798E2E2051277500BFF940 /* mswebrtc.framework in Embed Frameworks */,
-				46798E1C2051277500BFF940 /* bctoolbox.framework in Embed Frameworks */,
-				46798E322051277500BFF940 /* ortp.framework in Embed Frameworks */,
-				46798E2A2051277500BFF940 /* msopenh264.framework in Embed Frameworks */,
-				46798E282051277500BFF940 /* mscodec2.framework in Embed Frameworks */,
-				46798E262051277500BFF940 /* msamr.framework in Embed Frameworks */,
+				460B03B820522324008BF459 /* bctoolbox-tester.framework in Embed Frameworks */,
+				460B03B920522324008BF459 /* bctoolbox.framework in Embed Frameworks */,
+				460B03BA20522324008BF459 /* linphone.framework in Embed Frameworks */,
+				460B03BB20522324008BF459 /* linphonetester.framework in Embed Frameworks */,
+				460B03BC20522324008BF459 /* mediastreamer_base.framework in Embed Frameworks */,
+				460B03BD20522324008BF459 /* mediastreamer_voip.framework in Embed Frameworks */,
+				460B03BE20522324008BF459 /* msamr.framework in Embed Frameworks */,
+				460B03BF20522324008BF459 /* mscodec2.framework in Embed Frameworks */,
+				460B03C020522324008BF459 /* msopenh264.framework in Embed Frameworks */,
+				460B03C120522324008BF459 /* mssilk.framework in Embed Frameworks */,
+				460B03C220522324008BF459 /* mswebrtc.framework in Embed Frameworks */,
+				460B03C320522324008BF459 /* msx264.framework in Embed Frameworks */,
+				460B03C420522324008BF459 /* ortp.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +68,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		460B039E20522300008BF459 /* msamr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = msamr.framework; sourceTree = "<group>"; };
+		460B039F20522300008BF459 /* bctoolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = bctoolbox.framework; sourceTree = "<group>"; };
+		460B03A020522304008BF459 /* linphone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = linphone.framework; sourceTree = "<group>"; };
+		460B03A120522305008BF459 /* mediastreamer_voip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mediastreamer_voip.framework; sourceTree = "<group>"; };
+		460B03A220522305008BF459 /* msopenh264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = msopenh264.framework; sourceTree = "<group>"; };
+		460B03A320522306008BF459 /* ortp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ortp.framework; sourceTree = "<group>"; };
+		460B03A420522306008BF459 /* mssilk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mssilk.framework; sourceTree = "<group>"; };
+		460B03A520522306008BF459 /* linphonetester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = linphonetester.framework; sourceTree = "<group>"; };
+		460B03A620522306008BF459 /* mswebrtc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mswebrtc.framework; sourceTree = "<group>"; };
+		460B03A720522307008BF459 /* mscodec2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mscodec2.framework; sourceTree = "<group>"; };
+		460B03A820522307008BF459 /* bctoolbox-tester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "bctoolbox-tester.framework"; sourceTree = "<group>"; };
+		460B03A920522308008BF459 /* mediastreamer_base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mediastreamer_base.framework; sourceTree = "<group>"; };
+		460B03AA20522308008BF459 /* msx264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = msx264.framework; sourceTree = "<group>"; };
 		46287AA72050C540005871D0 /* linphone-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "linphone-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46287AAA2050C540005871D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46287AAB2050C540005871D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,19 +91,6 @@
 		46287AB62050C540005871D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46287AB82050C540005871D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46287AB92050C540005871D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		46798DFE2051234400BFF940 /* mswebrtc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mswebrtc.framework; sourceTree = "<group>"; };
-		46798DFF2051234400BFF940 /* ortp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ortp.framework; sourceTree = "<group>"; };
-		46798E002051234600BFF940 /* mediastreamer_base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mediastreamer_base.framework; sourceTree = "<group>"; };
-		46798E012051234900BFF940 /* linphone.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = linphone.framework; sourceTree = "<group>"; };
-		46798E022051234A00BFF940 /* msamr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = msamr.framework; sourceTree = "<group>"; };
-		46798E032051234A00BFF940 /* bctoolbox-tester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "bctoolbox-tester.framework"; sourceTree = "<group>"; };
-		46798E042051234A00BFF940 /* mscodec2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mscodec2.framework; sourceTree = "<group>"; };
-		46798E052051234C00BFF940 /* mediastreamer_voip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mediastreamer_voip.framework; sourceTree = "<group>"; };
-		46798E062051234D00BFF940 /* linphonetester.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = linphonetester.framework; sourceTree = "<group>"; };
-		46798E072051234E00BFF940 /* bctoolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = bctoolbox.framework; sourceTree = "<group>"; };
-		46798E082051234E00BFF940 /* msopenh264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = msopenh264.framework; sourceTree = "<group>"; };
-		46798E092051234E00BFF940 /* mssilk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mssilk.framework; sourceTree = "<group>"; };
-		46798E0A2051234E00BFF940 /* msx264.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = msx264.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,32 +98,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46798E122051234E00BFF940 /* mediastreamer_voip.framework in Frameworks */,
-				46798E0B2051234E00BFF940 /* mswebrtc.framework in Frameworks */,
-				46798E0C2051234E00BFF940 /* ortp.framework in Frameworks */,
-				46798E252051277500BFF940 /* msamr.framework in Frameworks */,
-				46798E1F2051277500BFF940 /* linphonetester.framework in Frameworks */,
-				46798E162051234E00BFF940 /* mssilk.framework in Frameworks */,
-				46798E212051277500BFF940 /* mediastreamer_base.framework in Frameworks */,
-				46798E2F2051277500BFF940 /* msx264.framework in Frameworks */,
-				46798E112051234E00BFF940 /* mscodec2.framework in Frameworks */,
-				46798E312051277500BFF940 /* ortp.framework in Frameworks */,
-				46798E2B2051277500BFF940 /* mssilk.framework in Frameworks */,
-				46798E0D2051234E00BFF940 /* mediastreamer_base.framework in Frameworks */,
-				46798E0F2051234E00BFF940 /* msamr.framework in Frameworks */,
-				46798E232051277500BFF940 /* mediastreamer_voip.framework in Frameworks */,
-				46798E132051234E00BFF940 /* linphonetester.framework in Frameworks */,
-				46798E2D2051277500BFF940 /* mswebrtc.framework in Frameworks */,
-				46798E182051277500BFF940 /* bctoolbox-tester.framework in Frameworks */,
-				46798E102051234E00BFF940 /* bctoolbox-tester.framework in Frameworks */,
-				46798E0E2051234E00BFF940 /* linphone.framework in Frameworks */,
-				46798E1D2051277500BFF940 /* linphone.framework in Frameworks */,
-				46798E272051277500BFF940 /* mscodec2.framework in Frameworks */,
-				46798E152051234E00BFF940 /* msopenh264.framework in Frameworks */,
-				46798E142051234E00BFF940 /* bctoolbox.framework in Frameworks */,
-				46798E172051234E00BFF940 /* msx264.framework in Frameworks */,
-				46798E292051277500BFF940 /* msopenh264.framework in Frameworks */,
-				46798E1B2051277500BFF940 /* bctoolbox.framework in Frameworks */,
+				460B03B520522308008BF459 /* bctoolbox-tester.framework in Frameworks */,
+				460B03B220522308008BF459 /* linphonetester.framework in Frameworks */,
+				460B03AE20522308008BF459 /* mediastreamer_voip.framework in Frameworks */,
+				460B03B120522308008BF459 /* mssilk.framework in Frameworks */,
+				460B03AD20522308008BF459 /* linphone.framework in Frameworks */,
+				460B03B620522308008BF459 /* mediastreamer_base.framework in Frameworks */,
+				460B03B420522308008BF459 /* mscodec2.framework in Frameworks */,
+				460B03AB20522308008BF459 /* msamr.framework in Frameworks */,
+				460B03AF20522308008BF459 /* msopenh264.framework in Frameworks */,
+				460B03AC20522308008BF459 /* bctoolbox.framework in Frameworks */,
+				460B03B320522308008BF459 /* mswebrtc.framework in Frameworks */,
+				460B03B020522308008BF459 /* ortp.framework in Frameworks */,
+				460B03B720522308008BF459 /* msx264.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,19 +153,19 @@
 		465626EC2050C7AC00A977AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46798E032051234A00BFF940 /* bctoolbox-tester.framework */,
-				46798E072051234E00BFF940 /* bctoolbox.framework */,
-				46798E012051234900BFF940 /* linphone.framework */,
-				46798E062051234D00BFF940 /* linphonetester.framework */,
-				46798E002051234600BFF940 /* mediastreamer_base.framework */,
-				46798E052051234C00BFF940 /* mediastreamer_voip.framework */,
-				46798E022051234A00BFF940 /* msamr.framework */,
-				46798E042051234A00BFF940 /* mscodec2.framework */,
-				46798E082051234E00BFF940 /* msopenh264.framework */,
-				46798E092051234E00BFF940 /* mssilk.framework */,
-				46798DFE2051234400BFF940 /* mswebrtc.framework */,
-				46798E0A2051234E00BFF940 /* msx264.framework */,
-				46798DFF2051234400BFF940 /* ortp.framework */,
+				460B03A820522307008BF459 /* bctoolbox-tester.framework */,
+				460B039F20522300008BF459 /* bctoolbox.framework */,
+				460B03A020522304008BF459 /* linphone.framework */,
+				460B03A520522306008BF459 /* linphonetester.framework */,
+				460B03A920522308008BF459 /* mediastreamer_base.framework */,
+				460B03A120522305008BF459 /* mediastreamer_voip.framework */,
+				460B039E20522300008BF459 /* msamr.framework */,
+				460B03A720522307008BF459 /* mscodec2.framework */,
+				460B03A220522305008BF459 /* msopenh264.framework */,
+				460B03A420522306008BF459 /* mssilk.framework */,
+				460B03A620522306008BF459 /* mswebrtc.framework */,
+				460B03AA20522308008BF459 /* msx264.framework */,
+				460B03A320522306008BF459 /* ortp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
