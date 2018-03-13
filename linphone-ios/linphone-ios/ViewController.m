@@ -22,7 +22,6 @@ static void registration_state_changed(struct _LinphoneCore *lc, LinphoneProxyCo
            ,linphone_proxy_config_get_identity(cfg)
            ,linphone_proxy_config_get_addr(cfg));
 }
-
 @interface ViewController ()<UITextFieldDelegate,UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *account;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -129,9 +128,6 @@ end:
     printf("Exited\n");
 }
 - (IBAction)cancel:(id)sender {
-    while(running)
-    {
-    }
     
 }
 @end
