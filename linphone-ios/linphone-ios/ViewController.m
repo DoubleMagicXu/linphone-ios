@@ -111,11 +111,8 @@ static void registration_state_changed(struct _LinphoneCore *lc, LinphoneProxyCo
     /* main loop for receiving notifications and doing background linphonecore work: */
     while(running){
         linphone_core_iterate(lc); /* first iterate initiates registration */
-        ms_usleep(500000);
+        ms_usleep(50000);
         NSLog(@"我在first running");
-        //signal(SIGINT,stop);
-        //running=false;
-        //break;
     }
     proxy_cfg = linphone_core_get_default_proxy_config(lc); /* get default proxy config*/
     linphone_proxy_config_edit(proxy_cfg); /*start editing proxy configuration*/
@@ -130,13 +127,13 @@ end:
      printf("Shutting down...\n");
     linphone_core_destroy(lc);
     printf("Exited\n");
-    
 }
-
 - (IBAction)cancel:(id)sender {
-    //signal(SIGINT,stop);
-    stop(1);
-    NSLog(@"running=false");
+    //signal(SIGQUIT,stop);
+    //NSLog(@"running=false");
+    while(1)
+    {
+        
+    }
 }
-
 @end
