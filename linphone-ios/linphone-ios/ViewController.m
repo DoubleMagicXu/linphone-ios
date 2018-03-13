@@ -129,11 +129,9 @@ end:
     printf("Exited\n");
 }
 - (IBAction)cancel:(id)sender {
-    //signal(SIGQUIT,stop);
-    //NSLog(@"running=false");
-    while(1)
+    while(running)
     {
-        
     }
+    
 }
 @end
