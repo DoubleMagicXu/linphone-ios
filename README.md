@@ -15,3 +15,5 @@ GitHub上面有相关项目[LINK](https://github.com/BelledonneCommunications/li
 注册部分:出现错误:2018-03-09 13:35:33:643 belle-sip-error-TCP bind() failed for ::0 port 5060: Address already in use2018-03-09 13:35:33:643 liblinphone-warning-Could not start tcp transport on port 5060, maybe this port is already used.原因是代码不全。
 
 注册成功后，注销不了。即使杀掉进程，freeswitch后台也显示已注册。刷新数据库:sofia profile internal flush_inbound_reg 即可。
+## 2018.3.13
+增加注销按钮,运行时出现BUG:点击注册按钮之后无法再点击注销按钮。
