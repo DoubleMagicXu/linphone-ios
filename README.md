@@ -18,4 +18,5 @@ GitHub上面有相关项目[LINK](https://github.com/BelledonneCommunications/li
 ## 2018.3.13
 增加注销按钮,运行时出现BUG:点击注册按钮之后无法再点击注销按钮。原因是程序跳不出按键事件循环。可能需要多线程。
 ## 2018.3.14
-自制framework,给程序调用.
+自制framework,给程序调用.目前无进展。
+在注册按钮事件上用gcd开一个线程。成功解决昨天的BUG.
