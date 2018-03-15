@@ -113,6 +113,7 @@ static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCal
         //#ifdef DEBUG
         //    linphone_core_enable_logs(NULL); /*enable liblinphone logs.*/
         //#endif
+        running=TRUE;
         signal(SIGINT,stop);
         vtable.registration_state_changed=registration_state_changed;
         lc=linphone_core_new(&vtable,NULL,NULL,NULL);
@@ -224,7 +225,7 @@ static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCal
         LinphoneCall *call=NULL;
         LinphoneCoreVTable vtable={0};
         LinphoneCore *lc;
-        const char *dest="1001@119.29.238.47";
+        const char *dest="1006@10.10.10.240";
         signal(SIGINT,stop);
 #ifdef DEBUG
         linphone_core_enable_logs(NULL); /*enable liblinphone logs.*/
