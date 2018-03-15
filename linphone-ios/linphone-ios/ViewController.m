@@ -97,6 +97,7 @@ static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCal
     NSLog(@"键盘已关闭");
 }
 - (IBAction)registration:(id)sender {
+    NSLog(@"点击了注册按钮");
     dispatch_queue_t queue = dispatch_queue_create("registration", DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
         //registration
@@ -140,7 +141,7 @@ static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCal
         while(running){
             linphone_core_iterate(lc); /* first iterate initiates registration */
             ms_usleep(50000);
-            NSLog(@"我在first running");
+            
         }
         proxy_cfg = linphone_core_get_default_proxy_config(lc); /* get default proxy config*/
         linphone_proxy_config_edit(proxy_cfg); /*start editing proxy configuration*/
@@ -149,7 +150,6 @@ static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCal
         while(linphone_proxy_config_get_state(proxy_cfg) !=  LinphoneRegistrationCleared){
             linphone_core_iterate(lc); /*to make sure we receive call backs before shutting down*/
             ms_usleep(50000);
-            NSLog(@"我在secound running");
         }
     end:
         printf("Shutting down...\n");
@@ -258,11 +258,10 @@ static void call_state_changed(LinphoneCore *lc, LinphoneCall *call, LinphoneCal
         printf("Shutting down...\n");
         linphone_core_destroy(lc);
         printf("Exited\n");
-        
     });
-   
 }
 
 - (IBAction)receive:(id)sender {
+    NSLog(@"点击了接听按钮");
 }
 @end
