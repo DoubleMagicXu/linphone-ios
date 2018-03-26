@@ -23,3 +23,5 @@ GitHub上面有相关项目[LINK](https://github.com/BelledonneCommunications/li
 ## 2018.3.15
 解决上述BUG,原因是没用重置变量.
 目前还要解决两个问题：1.拨号和接通功能。2.基于linphone制作sdk,便于调用。
+## 2018.3.26
+项目已交接。再见！
